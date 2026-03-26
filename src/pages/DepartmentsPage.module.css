@@ -1,0 +1,59 @@
+.page   { animation: fadeUp 0.3s ease; }
+.layout { display: grid; grid-template-columns: 270px 1fr; gap: 1.5rem; align-items: start; }
+
+/* List column */
+.listCol { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.deptCard { transition: border-color 0.14s; }
+.cardTop  { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.4rem; }
+.deptName { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.3rem; }
+.deptMeta { display: flex; align-items: center; gap: 0.45rem; }
+.loc      { font-size: 0.7rem; color: var(--text-3); }
+.bubble   {
+  background: var(--accent-glow); color: var(--accent);
+  border: 1px solid var(--accent); border-radius: 50%;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 700; flex-shrink: 0;
+}
+.budget    { font-size: 0.72rem; color: var(--text-3); margin-top: 0.35rem; }
+.budget strong { color: var(--yellow); }
+.createdAt { font-size: 0.65rem; color: var(--text-3); font-family: var(--mono); margin-top: 0.2rem; }
+
+/* Detail column */
+.detailCol {
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1.5rem; min-height: 360px;
+}
+.detailContent { animation: fadeUp 0.25s ease; }
+.detailHeader  { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.detailTitle   { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem; }
+.detailTags    { display: flex; gap: 0.4rem; }
+.detailNumbers { display: flex; gap: 1.5rem; }
+.dNum          { text-align: right; }
+.dNumVal       { display: block; font-family: var(--mono); font-size: 1.2rem; font-weight: 700; }
+.dNumLbl       { font-size: 0.65rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.relRow { margin-bottom: 1.15rem; }
+
+/* Profile mini-grid */
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+.profileMini {
+  background: var(--bg-3); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 0.75rem;
+  display: flex; gap: 0.6rem; align-items: flex-start;
+}
+.miniAvatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--accent));
+  color: #fff; font-size: 0.62rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.miniName   { font-size: 0.78rem; font-weight: 700; }
+.miniSkills { font-size: 0.68rem; color: var(--cyan); margin-top: 0.1rem; }
+.miniCity   { font-size: 0.66rem; color: var(--text-3); margin-top: 0.1rem; }

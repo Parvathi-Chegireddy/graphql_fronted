@@ -1,0 +1,202 @@
+.page { animation: fadeUp 0.3s ease; }
+
+/* ── Selector ────────────────────────────────────────────────────── */
+.selectorCard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.selectorLabel {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-3);
+  margin-bottom: 0.85rem;
+}
+
+/* Quick-pick chips */
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.13s;
+  font-family: var(--sans);
+  color: var(--text-2);
+}
+.chip:hover { border-color: var(--border-2); color: var(--text); }
+
+.chipActive {
+  border-color: var(--accent) !important;
+  background: var(--accent-glow) !important;
+  color: var(--accent) !important;
+}
+
+.chipName  { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; }
+.chipCount {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.05rem 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--text-3);
+}
+.chipActive .chipCount { border-color: var(--accent); color: var(--accent); }
+
+/* Dropdown row */
+.dropRow { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+.select {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  padding: 0.6rem 2.25rem 0.6rem 0.85rem;
+  min-width: 260px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%2350507a' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  transition: border-color 0.14s;
+}
+.select:focus { outline: none; border-color: var(--accent); }
+
+.selMeta { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
+
+/* ── Sections ────────────────────────────────────────────────────── */
+.sections { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.section {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.5rem;
+  animation: fadeUp 0.25s ease;
+}
+
+/* Meta line */
+.metaLine {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  font-family: var(--mono);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.metaLine code { color: var(--cyan); background: var(--bg-3); padding: 0.05rem 0.3rem; border-radius: 3px; }
+.metaLine strong { color: var(--text-2); }
+
+/* ── Schema Table ────────────────────────────────────────────────── */
+.tableWrap { overflow-x: auto; border-radius: var(--r-sm); border: 1px solid var(--border); }
+
+.schemaTable { width: 100%; border-collapse: collapse; font-size: 0.815rem; }
+.schemaTable thead { background: var(--bg-3); }
+.schemaTable th {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.schemaTable td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.schemaTable tr:last-child td { border-bottom: none; }
+.schemaTable tbody tr:hover td { background: var(--bg-3); }
+
+.pkRow td { background: rgba(250,216,77,.04); }
+.pkRow:hover td { background: rgba(250,216,77,.08) !important; }
+
+.rowNum  { color: var(--text-3); font-family: var(--mono); font-size: 0.7rem; width: 28px; }
+.colName { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; }
+.pkIcon  { color: var(--yellow); }
+.dash    { color: var(--text-3); font-size: 0.8rem; }
+.defVal code {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--cyan);
+  background: var(--bg);
+  padding: 0.08rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* ── Records Table ───────────────────────────────────────────────── */
+.recordTable { width: 100%; border-collapse: collapse; font-size: 0.815rem; }
+.recordTable thead { background: var(--bg-3); }
+.recordTable th {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.recordTable td {
+  padding: 0.6rem 1rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recordTable tr:last-child td { border-bottom: none; }
+.recordTable tbody tr:hover td { background: var(--bg-3); }
+.idCell   { font-family: var(--mono); font-weight: 700; color: var(--accent) !important; }
+.nullVal  { color: var(--text-3); font-style: italic; font-family: var(--mono); font-size: 0.72rem; }
+
+/* ── Query Cards ─────────────────────────────────────────────────── */
+.queryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+.queryCard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.queryTitle {
+  padding: 0.5rem 1rem;
+  background: var(--bg-3);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.queryCode {
+  padding: 0.85rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+}
