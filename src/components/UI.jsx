@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './UI.module.css';
 
-/* ── Page Header ──────────────────────────────────────────────────── */
 export function PageHeader({ title, subtitle, badge, action }) {
   return (
     <header className={s.pageHeader}>
@@ -17,7 +16,6 @@ export function PageHeader({ title, subtitle, badge, action }) {
   );
 }
 
-/* ── Stat Card ────────────────────────────────────────────────────── */
 export function StatCard({ icon, label, value, sub, color = 'accent' }) {
   return (
     <div className={`${s.statCard} ${s[`c_${color}`]}`}>
@@ -29,7 +27,6 @@ export function StatCard({ icon, label, value, sub, color = 'accent' }) {
   );
 }
 
-/* ── Card ─────────────────────────────────────────────────────────── */
 export function Card({ children, className = '', onClick, active }) {
   return (
     <div
@@ -42,12 +39,12 @@ export function Card({ children, className = '', onClick, active }) {
   );
 }
 
-/* ── Tag / Pill ───────────────────────────────────────────────────── */
+
 export function Tag({ children, color = 'default' }) {
   return <span className={`${s.tag} ${s[`tag_${color}`]}`}>{children}</span>;
 }
 
-/* ── Loading / Error ──────────────────────────────────────────────── */
+
 export function Spinner({ size = 20 }) {
   return (
     <div
@@ -82,12 +79,10 @@ export function ErrorBlock({ message }) {
   );
 }
 
-/* ── Section Title ────────────────────────────────────────────────── */
 export function SectionTitle({ children }) {
   return <h2 className={s.sectionTitle}>{children}</h2>;
 }
 
-/* ── Select ───────────────────────────────────────────────────────── */
 export function Select({ value, onChange, options, placeholder, wide }) {
   return (
     <select
@@ -104,7 +99,6 @@ export function Select({ value, onChange, options, placeholder, wide }) {
   );
 }
 
-/* ── Data Table ───────────────────────────────────────────────────── */
 export function DataTable({ columns, rows, pkCols = [] }) {
   if (!rows || rows.length === 0) return <EmptyState message="No data" />;
   return (
@@ -135,7 +129,6 @@ export function DataTable({ columns, rows, pkCols = [] }) {
   );
 }
 
-/* ── Empty State ──────────────────────────────────────────────────── */
 export function EmptyState({ icon = '◎', message }) {
   return (
     <div className={s.empty}>
@@ -145,12 +138,10 @@ export function EmptyState({ icon = '◎', message }) {
   );
 }
 
-/* ── Divider ──────────────────────────────────────────────────────── */
 export function Divider() {
   return <hr className={s.divider} />;
 }
 
-/* ── Rel Badge ────────────────────────────────────────────────────── */
 export function RelBadge({ type, from: f, to: t }) {
   const colorMap = {
     'One-to-Many':  'green',
