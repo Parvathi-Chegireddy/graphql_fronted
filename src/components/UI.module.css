@@ -1,4 +1,4 @@
-/* ── Page Header ────────────────────────────────────────────────── */
+
 .pageHeader {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,6 @@
   letter-spacing: 0.06em;
 }
 
-/* ── Stat Card ──────────────────────────────────────────────────── */
 .statCard {
   background: var(--bg-2);
   border: 1px solid var(--border);
@@ -55,7 +54,6 @@
 .statLabel { color: var(--text-2); font-size: 0.72rem; margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .statSub   { color: var(--text-3); font-size: 0.7rem; margin-top: 0.15rem; }
 
-/* ── Card ───────────────────────────────────────────────────────── */
 .card {
   background: var(--bg-2);
   border: 1px solid var(--border);
@@ -66,7 +64,6 @@
 .card:hover { border-color: var(--border-2); }
 .cardActive { border-color: var(--accent) !important; box-shadow: 0 0 0 1px var(--accent-glow); }
 
-/* ── Tags ───────────────────────────────────────────────────────── */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -86,7 +83,6 @@
 .tag_red     { background: rgba(250,77,106,.1);  color: var(--red);    border: 1px solid rgba(250,77,106,.3); }
 .tag_orange  { background: rgba(250,156,61,.1);  color: var(--orange); border: 1px solid rgba(250,156,61,.3); }
 
-/* ── Spinner / Loading ──────────────────────────────────────────── */
 .spinner {
   border: 2px solid var(--border-2);
   border-top-color: var(--accent);
@@ -104,7 +100,6 @@
   padding: 2.5rem 1rem;
 }
 
-/* ── Error ──────────────────────────────────────────────────────── */
 .errorBlock {
   display: flex;
   gap: 1rem;
@@ -120,7 +115,6 @@
 .errorHint  { color: var(--text-3); font-size: 0.72rem; margin-top: 0.35rem; font-family: var(--mono); }
 .errorHint code { color: var(--cyan); background: var(--bg-3); padding: 0.05rem 0.3rem; border-radius: 3px; }
 
-/* ── Section Title ──────────────────────────────────────────────── */
 .sectionTitle {
   font-size: 0.9rem;
   font-weight: 700;
@@ -134,7 +128,6 @@
 }
 .sectionTitle::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-/* ── Select ─────────────────────────────────────────────────────── */
 .select {
   background: var(--bg-3);
   border: 1px solid var(--border);
@@ -153,7 +146,7 @@
 }
 .select:focus { outline: none; border-color: var(--accent); }
 
-/* ── Data Table ─────────────────────────────────────────────────── */
+
 .tableWrap { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--border); }
 .table { width: 100%; border-collapse: collapse; font-size: 0.815rem; }
 .table thead { background: var(--bg-3); }
@@ -183,7 +176,7 @@
 .table tbody tr:hover td { background: var(--bg-3); }
 .null { color: var(--text-3); font-style: italic; font-family: var(--mono); font-size: 0.72rem; }
 
-/* ── Empty State ────────────────────────────────────────────────── */
+
 .empty {
   display: flex;
   flex-direction: column;
@@ -195,10 +188,8 @@
 }
 .emptyIcon { font-size: 2.2rem; opacity: 0.35; }
 
-/* ── Divider ────────────────────────────────────────────────────── */
 .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 
-/* ── Relationship Badge ─────────────────────────────────────────── */
 .relBadge {
   display: inline-flex;
   align-items: center;
